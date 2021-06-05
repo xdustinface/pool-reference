@@ -675,7 +675,7 @@ class Pool:
         ):
             return {
                 "error_code": PoolErr.INVALID_P2_SINGLETON_PUZZLE_HASH.value,
-                "error_message": f"The puzzl h {partial.auth_key_and_partial_aggregate_signature}",
+                "error_message": f"The pool contract puzzle hash {partial.payload.proof_of_space.pool_contract_puzzle_hash} of the proof of space is invalid.",
             }
 
         if partial.payload.end_of_sub_slot:
